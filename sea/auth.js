@@ -43,6 +43,9 @@
                     root.get('~@' + alias).once(act.a);
                     return;
                 }
+
+                console.log('wtffff');
+                console.log(list);
                 return act.err('Wrong user or password.')
             }
             root.get(get).once(act.a);
