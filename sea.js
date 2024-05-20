@@ -1009,6 +1009,9 @@
 
             var act = {}, u;
             act.a = function (data) {
+                console.log('bug a');
+                console.log(data);
+
                 if (!data) { return act.b() }
                 if (!data.pub) {
                     var tmp = []; Object.keys(data).forEach(function (k) { if ('_' == k) { return } tmp.push(data[k]) })
@@ -1025,6 +1028,9 @@
                         root.get('~@' + alias).once(act.a);
                         return;
                     }
+
+                    console.log('bug b');
+                    console.log(list);
                     return act.err('Wrong user or password. SEA')
                 }
                 root.get(get).once(act.a);
