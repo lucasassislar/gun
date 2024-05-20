@@ -46,7 +46,7 @@
 
                 console.log('wtffff');
                 console.log(list);
-                return act.err('Wrong user or password.')
+                return act.err('Wrong user or password. SERIOUSLY?')
             }
             root.get(get).once(act.a);
         }
